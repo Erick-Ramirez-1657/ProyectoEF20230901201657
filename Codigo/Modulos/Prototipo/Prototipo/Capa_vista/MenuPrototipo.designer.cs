@@ -36,6 +36,7 @@ namespace Vista_PrototipoMenu
             this.panelTranportes = new System.Windows.Forms.Panel();
             this.btnProcesos = new System.Windows.Forms.Button();
             this.PanelAuditoria = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.panelseguridad = new System.Windows.Forms.Panel();
             this.btnSeguridad = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@ namespace Vista_PrototipoMenu
             this.btnayuda = new System.Windows.Forms.Button();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnsalir = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelAuditoria.SuspendLayout();
@@ -147,6 +147,22 @@ namespace Vista_PrototipoMenu
             this.PanelAuditoria.Size = new System.Drawing.Size(415, 136);
             this.PanelAuditoria.TabIndex = 5;
             this.PanelAuditoria.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(415, 54);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Realizacion de reserva";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnReportes
             // 
@@ -267,22 +283,6 @@ namespace Vista_PrototipoMenu
             this.btnsalir.UseVisualStyleBackColor = false;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(415, 54);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Realizacion de reserva";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // MenuPrototipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,10 +290,11 @@ namespace Vista_PrototipoMenu
             this.ClientSize = new System.Drawing.Size(1254, 556);
             this.Controls.Add(this.panelSideMenu);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuPrototipo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Erick Ramirez";
+            this.Load += new System.EventHandler(this.MenuPrototipo_Load);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelAuditoria.ResumeLayout(false);

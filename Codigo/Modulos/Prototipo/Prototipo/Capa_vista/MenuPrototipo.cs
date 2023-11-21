@@ -50,58 +50,48 @@ namespace Vista_PrototipoMenu
         //Método que valida si el submenu no es visible oculta el submenu
         private void showSubMenu(Panel subMenu)
         {
-            if (subMenu.Visible == false)
-            {
-                hideSubMenu();
-                subMenu.Visible = true;
-            }
-            else
-                subMenu.Visible = false;
+            //a
+           if (subMenu.Visible == false)
+           {
+               hideSubMenu();
+               subMenu.Visible = true;
+           }
+           else
+               subMenu.Visible = false;
         }
         //Método que muestra el panel indicado
         private void btnmanteniminetos_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelTranportes);
+           showSubMenu(panelTranportes);
         }
         //Método que muestra el panel indicado
         private void btnProcesos_Click(object sender, EventArgs e)
         {
-            showSubMenu(PanelAuditoria);
+           showSubMenu(PanelAuditoria);
         }
         //Método que muestra el panel indicado
         private void btnSeguridad_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelayuda);
+           showSubMenu(panelayuda);
         }
         //Método que muestra el panel indicado
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelseguridad);
+           showSubMenu(panelseguridad);
         }
-        //Método que muestra el formulario indicado
-        //Método que muestra el formulario indicado
-        private void btnaplicaciones_Click(object sender, EventArgs e)
-        {
-            frmAplicaciones form = new frmAplicaciones();
-            form.MdiParent = this;
-            form.Show();
-            hideSubMenu();
-        }
-        //Método que muestra el formulario indicado
-
         private void btninicio_Click(object sender, EventArgs e)
         {
-            this.Close();
+           this.Close();
         }
         //Método que oculta el formulario
         private void btnsalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+           this.Close();
         }
         //Método que muestra el formulario indicado
         private void btnayuda_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(this, "umg.chm");            
+            Help.ShowHelp(this, "ayuda.chm");            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -111,6 +101,10 @@ namespace Vista_PrototipoMenu
             form.Show();
             hideSubMenu();
         }
-        
+
+        private void MenuPrototipo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
