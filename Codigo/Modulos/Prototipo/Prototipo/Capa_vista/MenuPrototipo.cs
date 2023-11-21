@@ -16,18 +16,24 @@ namespace Vista_PrototipoMenu
 
         Controlador cn = new Controlador();
 
+
         //Método que guarda en un arreglo de tipo botón los botones que se tienen en el formulario. Se les da permiso a los diferentes botones de acuerdo a la función que realice este
         public MenuPrototipo()
         {
             InitializeComponent();
             //Control para habilitar opciones del menu
-            Button[] apps = {btnaplicaciones};
+            Button[] apps = { button1 };
             //Llamada metodo de libreria Controlador del modulo de Seguridad
             cn.deshabilitarApps(apps);
             //Llamada metodo de libreria Controlador del modulo de Seguridad
             cn.getAccesoApp(1002, apps[0]);
+            InitializeComponent();
+            //Control para habilitar opciones del menu
+            //Llamada metodo de libreria Controlador del modulo de Seguridad
+            cn.deshabilitarApps(apps);
+            //
         }
-        
+
         //Validaciones que si son visibles los panales los oculta
         private void hideSubMenu()
         {
@@ -97,5 +103,14 @@ namespace Vista_PrototipoMenu
         {
             Help.ShowHelp(this, "umg.chm");            
         }
-     }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reserva form = new Reserva();
+            form.MdiParent = this;
+            form.Show();
+            hideSubMenu();
+        }
+        
+    }
 }
